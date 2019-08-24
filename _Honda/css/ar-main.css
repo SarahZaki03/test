@@ -1,0 +1,334 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, and, address, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, input, textarea, select {
+	background:transparent;
+	border:0;
+	font-size:100%;
+	margin:0;
+	outline:0;
+	padding:0;
+	vertical-align:baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+body {
+	line-height:1;
+}
+abbr[title], dfn[title] {
+	border-bottom:1px dotted;
+	cursor:help;
+}
+blockquote, q {
+	quotes:none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content:none;
+}
+del {
+	text-decoration:line-through;
+}
+hr {
+	background:transparent;
+	border:0;
+	clear:both;
+	color:transparent;
+	height:1px;
+	margin:0;
+	padding:0;
+}
+mark {
+	background-color:#ffffb3;
+	font-style:italic
+}
+input, select {
+	vertical-align:middle;
+}
+ins {
+	background-color:red;
+	color:white;
+	text-decoration:none;
+}
+ol, ul {
+	list-style:none;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+/* ----- Reset Bart Ended ----- */
+
+/* For All Parts */
+.h-cursor{
+	cursor: pointer;
+}
+.message{
+	color: green;
+    font-weight: 100;
+    text-align: left;
+    width: 75%;
+    margin: auto; 
+}
+.danger{
+	color: red;
+}
+.set-dir{
+	direction: rtl;
+}
+.ar-font{
+	font-family: 'Cairo', sans-serif;
+}
+.text-right{
+	text-align: right;
+}
+
+/* ----- Part For MENU BAR ----- */
+.m-menubar{
+	display: flex;
+    align-items: flex-start;
+	justify-content: space-between;
+	-webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+	box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+}
+#main img{
+	width: 180px;
+    margin-top: 5px;
+    padding-left: 25px;
+}
+.lang {
+	display: flex;
+	margin: 10px 0 10px 10px;
+	font-size: 0.8em;
+}
+.h-search{
+	text-transform: capitalize;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 2px;
+    color: #cb0000;
+	width: 0px; 
+    transition: width 0.5s;
+    -webkit-transition: width 0.5s; 
+}
+.menu-search:hover  + .h-search{ /* This work only if .h-search came after .menu-search immediately  */ 
+	width: 150px;
+	border: 1px solid #ebe7e7;	
+}
+.h-search:hover{
+	width: 150px;
+	border: 1px solid #ebe7e7;	
+}
+.m-btn{
+	border: 1px solid #bc0000;
+	padding: 5px 0 5px 12px;
+    color: #bc0000;
+    cursor: pointer;
+	line-height: 25px;
+}
+.menu-contact{
+	margin-right: 10px;
+}
+.menu-search{
+	margin: 10px 10px 10px 0;
+    padding-right: 15px;
+    padding-left: 10px;
+    font-size: 1em;
+    border-right: 1px solid gray; 
+	cursor: pointer;
+}
+.change-lang{
+	font-family: 'Cairo', sans-serif;
+	padding: 10px 5px 0 3px;
+    margin-right: 9px;
+    cursor: pointer;  
+}
+.change-lang a{
+	color: gray;
+}
+.open-close-menu{
+	margin-top: 10px;
+	margin-right: 20px;
+}
+.open-menu{
+	background-color: #bc0000;
+    border-radius: 20px;
+    border: 3px solid #bc0000;
+    color: white;
+	cursor: pointer;
+}
+.change-country{
+	font-size: 0.8em;
+	font-family: cairo;
+    color: gray;
+}
+
+/* ----- Part for dropdown menu ----- */
+.menu-modal{
+	width: 100%;
+    height: 100%;    
+	background-color: #8080809e;
+    position: absolute;
+    top: 56px;
+    z-index: 1000;
+	display: none;
+}
+.h-width{
+	width: 14px!important;
+}
+.f-dropdown-menu{
+	width: 100%;
+	height: 350px;
+	background-color: white;
+	border-bottom: 1px solid #bc0000;
+	border-top: 1px solid black;
+	overflow: auto;
+}
+.h-dropdown-menu{
+	width: 85%;
+    margin: auto;
+    height: 99%;
+    background-color: white;
+    display: flex;
+}
+.dropdown-part{
+	width: 25%;
+    height: 250px;
+    border-left: 1px solid #ededed;
+    margin-top: 50px;
+	padding-right: 4%;
+}
+.subheader{
+	text-transform: uppercase;
+	font-size: 0.9em;
+	padding-bottom: 10px;
+}
+.social-media{
+	padding-left: 30px;
+	margin-bottom: 30px;
+} 
+.social-ul{
+	font-size: 0.8em;
+}
+.left-menu{
+	text-transform: uppercase;
+	font-weight: 600; 
+}
+.left-menu li:hover{
+	color: #bc0000;
+}
+.left-small-menu{
+	text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 500;
+    color: #868686;
+}
+.left-menu li, .left-small-menu li{
+	cursor: pointer;
+}
+.left-middle-menu li{
+	padding-bottom: 20px;
+    padding-top: 15px;
+    border-bottom: 1px solid #b8b6b6;
+	font-weight: 500;
+    width: 83%;
+}
+.left-small-menu li:hover{
+	color: black;
+}
+.left-middle-menu i{
+	float: left;
+    color: #bc0000;
+    padding-top: 6px
+}
+.get-in-touch{
+	color: #bc0000;
+}
+.git-menu li{
+	margin-bottom: 10px;
+}
+.pro-btn{
+	margin-bottom: 10px;
+	margin-top: 5px!important;
+}
+.select-option{
+	width: 50%;
+    padding-bottom: 6px;
+    margin-right: 6px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #959595;
+    font-size: 0.7em;
+}
+.gray{
+    color: #959595;
+}
+.small-line{
+	vertical-align: super;
+    margin-right: 7px;
+    color: gray;
+}
+
+
+
+/* ----- Part For BIG BACKGROUND IMAGE ----- */
+.head-m-image{
+	height: 350px;
+    width: 100%;
+}
+.head-mid{
+	position: relative;
+}
+.head-mid h3{
+	position: absolute;
+	font-weight: 500;
+    color: white;
+	top: 15%;
+	right: 7%;
+    font-family: Cairo, sans-serif;
+}
+
+/* ----- Part For PAGE BODY ----- */
+.contact-body{
+	text-align: center;
+}
+.contact-body h2{
+	margin-top: 50px; 
+    color: #5f5d5d;
+}
+.form-p{
+	padding-top: 20px;
+    color: #5d5d5d;
+}
+.contact-body button, .dropdown-part button{
+	border: none;
+    color: white;
+    background-color: #bc0000;
+    padding: 7px 15px;
+	margin-top: 30px;
+}
+.form-element{
+	width: 35%;
+    padding: 10px 0;
+    margin: 5px 25px;
+    border-bottom: 1px solid #bc0000;
+	color: gray;
+}
+.form-comment{
+	color: gray;
+    width: 75%;
+	padding: 10px 0;
+	margin-top: 20px;
+	border-bottom: 2px solid #ededed;
+}
+
+
+
+/* ----- Part for FOOTER ----- */
+#m-footer{
+	width: 100%;
+	height: 100px;
+}
+
+
+
